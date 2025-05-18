@@ -1,6 +1,10 @@
 package com.aas.calculator_bmi;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -17,14 +21,17 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        String alertText = "Hello, this is a toast message!";
 
-        Toast.makeText(this,alertText,Toast.LENGTH_LONG).show();
+        TextView resultText = findViewById(R.id.text_view_result);
 
-       /* ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });*/
+        RadioButton radioButtonMale = findViewById(R.id.radio_button_male);
+        RadioButton radioButtonFemale = findViewById(R.id.radio_button_female);
+
+        EditText editTextHeightFeet = findViewById(R.id.edit_text_height_feet);
+        EditText editTextHeightInches = findViewById(R.id.edit_text_height_inches);
+        EditText editTextWeight = findViewById(R.id.edit_text_weight);
+        EditText editTextAge = findViewById(R.id.edit_text_age);
+
+        Button calculateButton = findViewById(R.id.button_calculate);
     }
 }
