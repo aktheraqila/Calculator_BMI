@@ -1,6 +1,7 @@
 package com.aas.calculator_bmi;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -33,5 +34,13 @@ public class MainActivity extends AppCompatActivity {
         EditText editTextAge = findViewById(R.id.edit_text_age);
 
         Button calculateButton = findViewById(R.id.button_calculate);
+
+        calculateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this,"Calculating BMI ...", Toast.LENGTH_LONG).show();
+
+            }
+        });
     }
 }
